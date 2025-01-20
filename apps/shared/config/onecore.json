@@ -1,0 +1,11 @@
+{
+    "dialect": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "rob",
+    "password": "Ocore2025**",
+    "database": "OneCore",
+    "autoLoadModels": true,
+    "synchronize": true
+  }
+  
