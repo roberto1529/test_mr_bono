@@ -1,0 +1,4 @@
+{
+    "$all_users": "select * from public.ocr_usu_info oui",
+    "$user_value": "select u.id from ocr_usu_usuario u join ocr_usu_pass p on p.id_usuario  = u.id  where lower(u.nombre_usario) = lower(:us)  and p.key = :pw"
+}
