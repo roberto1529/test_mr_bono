@@ -7,5 +7,5 @@
     "database": "OneCore",
     "autoLoadModels": true,
     "synchronize": true
-  }
+}
   
