@@ -1,0 +1,29 @@
+-- mr_bono.usuarios definition
+
+-- Drop table
+
+-- DROP TABLE mr_bono.usuarios;
+
+CREATE TABLE mr_bono.usuarios (
+	id int4 DEFAULT nextval('mr_bono.newtable_id_seq'::regclass) NOT NULL,
+	nombre varchar NOT NULL,
+	correo text NOT NULL,
+	id_rol int4 NULL,
+	pass varchar NULL,
+	estado bool DEFAULT true NULL,
+	CONSTRAINT newtable_pk PRIMARY KEY (id),
+	CONSTRAINT newtable_unique UNIQUE (correo),
+	CONSTRAINT usuarios_rol_fk FOREIGN KEY (id_rol) REFERENCES mr_bono.rol(id)
+);
+
+-- mr_bono.rol definition
+
+-- Drop table
+
+-- DROP TABLE mr_bono.rol;
+
+CREATE TABLE mr_bono.rol (
+	id serial4 NOT NULL,
+	nombre_rol varchar DEFAULT USER NULL,
+	CONSTRAINT rol_pk PRIMARY KEY (id)
+);
